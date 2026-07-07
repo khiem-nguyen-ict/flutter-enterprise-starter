@@ -3,5 +3,25 @@
   "appTitle": "Flutter Enterprise Starter",
   "@appTitle": {
     "description": "Application title"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings page title"
+  },
+  "backToHome": "Back to Home",
+  "@backToHome": {
+    "description": "Back to Home button text"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home page title"
+  },
+  "goToSettings": "Go to Settings",
+  "@goToSettings": {
+    "description": "Go to Settings button text"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "@@locale": "fi",
+  "appTitle": "Flutter Enterprise Starter",
+  "settings": "Asetukset",
+  "backToHome": "Takaisin etusivulle",
+  "home": "Koti",
+  "goToSettings": "Siirry asetuksiin",
+  "login": "Kirjaudu sisään"
+}

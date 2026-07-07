@@ -6,6 +6,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
+import 'app_localizations_fi.dart';
+import 'app_localizations_vi.dart';
 
 // ignore_for_file: type=lint
 
@@ -92,13 +94,47 @@ abstract class AppLocalizations {
   ];
 
   /// A list of this localizations delegate's supported locales.
-  static const List<Locale> supportedLocales = <Locale>[Locale('en')];
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('en'),
+    Locale('fi'),
+    Locale('vi')
+  ];
 
   /// Application title
   ///
   /// In en, this message translates to:
   /// **'Flutter Enterprise Starter'**
   String get appTitle;
+
+  /// Settings page title
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// Back to Home button text
+  ///
+  /// In en, this message translates to:
+  /// **'Back to Home'**
+  String get backToHome;
+
+  /// Home page title
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// Go to Settings button text
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Settings'**
+  String get goToSettings;
+
+  /// Login button text
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
 }
 
 class _AppLocalizationsDelegate
@@ -112,7 +148,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['en'].contains(locale.languageCode);
+      <String>['en', 'fi', 'vi'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -123,6 +159,10 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   switch (locale.languageCode) {
     case 'en':
       return AppLocalizationsEn();
+    case 'fi':
+      return AppLocalizationsFi();
+    case 'vi':
+      return AppLocalizationsVi();
   }
 
   throw FlutterError(
