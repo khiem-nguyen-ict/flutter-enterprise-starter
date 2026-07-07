@@ -1,0 +1,7 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flutter Enterprise Starter",
+  "@appTitle": {
+    "description": "Application title"
+  }
+}

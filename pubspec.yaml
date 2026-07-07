@@ -1,0 +1,48 @@
+name: flutter_enterprise_starter
+description: A scalable, feature-first Flutter mobile app built on clean architecture.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # State management + dependency injection
+  flutter_riverpod: ^2.4.9
+  # Routing
+  go_router: ^13.1.0
+  # Networking
+  dio: ^5.3.3
+  # Immutability / serialization
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  # Localization
+  intl: ^0.20.2
+  # Local storage
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  # Connectivity
+  connectivity_plus: ^5.0.1
+  # Logging
+  logger: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.7
+  freezed: ^2.4.2
+  json_serializable: ^6.7.1
+  mocktail: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/
+    - assets/icons/
