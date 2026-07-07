@@ -23,5 +23,85 @@
   "login": "Login",
   "@login": {
     "description": "Login button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Password field label"
+  },
+  "demoHint": "Demo mode - any email and password will sign you in",
+  "@demoHint": {
+    "description": "Hint shown on the login screen"
+  },
+  "welcomeBack": "Welcome back",
+  "@welcomeBack": {
+    "description": "Home screen greeting"
+  },
+  "viewProfile": "View Profile",
+  "@viewProfile": {
+    "description": "Button that navigates to the profile screen"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile screen title"
+  },
+  "role": "Role",
+  "@role": {
+    "description": "User role label"
+  },
+  "bio": "Bio",
+  "@bio": {
+    "description": "User bio label"
+  },
+  "location": "Location",
+  "@location": {
+    "description": "User location label"
+  },
+  "joined": "Joined",
+  "@joined": {
+    "description": "Account join date label"
+  },
+  "posts": "Posts",
+  "@posts": {
+    "description": "Number of posts label"
+  },
+  "followers": "Followers",
+  "@followers": {
+    "description": "Number of followers label"
+  },
+  "following": "Following",
+  "@following": {
+    "description": "Number of accounts followed label"
+  },
+  "logout": "Log out",
+  "@logout": {
+    "description": "Log out button text"
+  },
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "description": "Edit profile button text"
+  },
+  "recentActivity": "Recent Activity",
+  "@recentActivity": {
+    "description": "Recent activity section title"
+  },
+  "revenue": "Revenue",
+  "@revenue": {
+    "description": "Revenue stat label"
+  },
+  "activeUsers": "Active Users",
+  "@activeUsers": {
+    "description": "Active users stat label"
+  },
+  "orders": "Orders",
+  "@orders": {
+    "description": "Orders stat label"
+  },
+  "conversion": "Conversion",
+  "@conversion": {
+    "description": "Conversion rate stat label"
   }
 }

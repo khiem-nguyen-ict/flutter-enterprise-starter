@@ -1,9 +1,107 @@
 {
   "@@locale": "vi",
   "appTitle": "Flutter Enterprise Starter",
+  "@appTitle": {
+    "description": "Application title"
+  },
   "settings": "Cài đặt",
+  "@settings": {
+    "description": "Settings page title"
+  },
   "backToHome": "Quay về trang chủ",
+  "@backToHome": {
+    "description": "Back to Home button text"
+  },
   "home": "Trang chủ",
+  "@home": {
+    "description": "Home page title"
+  },
   "goToSettings": "Đi đến cài đặt",
-  "login": "Đăng nhập"
+  "@goToSettings": {
+    "description": "Go to Settings button text"
+  },
+  "login": "Đăng nhập",
+  "@login": {
+    "description": "Login button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Mật khẩu",
+  "@password": {
+    "description": "Password field label"
+  },
+  "demoHint": "Chế độ demo - bất kỳ email và mật khẩu nào cũng đăng nhập được",
+  "@demoHint": {
+    "description": "Hint shown on the login screen"
+  },
+  "welcomeBack": "Chào mừng trở lại",
+  "@welcomeBack": {
+    "description": "Home screen greeting"
+  },
+  "viewProfile": "Xem hồ sơ",
+  "@viewProfile": {
+    "description": "Button that navigates to the profile screen"
+  },
+  "profile": "Hồ sơ",
+  "@profile": {
+    "description": "Profile screen title"
+  },
+  "role": "Vai trò",
+  "@role": {
+    "description": "User role label"
+  },
+  "bio": "Giới thiệu",
+  "@bio": {
+    "description": "User bio label"
+  },
+  "location": "Địa điểm",
+  "@location": {
+    "description": "User location label"
+  },
+  "joined": "Tham gia",
+  "@joined": {
+    "description": "Account join date label"
+  },
+  "posts": "Bài viết",
+  "@posts": {
+    "description": "Number of posts label"
+  },
+  "followers": "Người theo dõi",
+  "@followers": {
+    "description": "Number of followers label"
+  },
+  "following": "Đang theo dõi",
+  "@following": {
+    "description": "Number of accounts followed label"
+  },
+  "logout": "Đăng xuất",
+  "@logout": {
+    "description": "Log out button text"
+  },
+  "editProfile": "Chỉnh sửa hồ sơ",
+  "@editProfile": {
+    "description": "Edit profile button text"
+  },
+  "recentActivity": "Hoạt động gần đây",
+  "@recentActivity": {
+    "description": "Recent activity section title"
+  },
+  "revenue": "Doanh thu",
+  "@revenue": {
+    "description": "Revenue stat label"
+  },
+  "activeUsers": "Người dùng hoạt động",
+  "@activeUsers": {
+    "description": "Active users stat label"
+  },
+  "orders": "Đơn hàng",
+  "@orders": {
+    "description": "Orders stat label"
+  },
+  "conversion": "Tỷ lệ chuyển đổi",
+  "@conversion": {
+    "description": "Conversion rate stat label"
+  }
 }

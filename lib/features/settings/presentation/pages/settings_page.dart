@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../config/l10n/app_localizations.dart';
 import '../../../../config/locale/locale_notifier.dart';
 import '../../../../config/theme/theme_notifier.dart';
+import '../../../../features/auth/data/providers/auth_provider.dart';
 
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
@@ -94,6 +95,15 @@ class SettingsPage extends ConsumerWidget {
                   },
                 ),
               ],
+            ),
+            const SizedBox(height: 40),
+            OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(
+                foregroundColor: Theme.of(context).colorScheme.error,
+              ),
+              onPressed: () => ref.read(authNotifierProvider.notifier).logout(),
+              icon: const Icon(Icons.logout_outlined),
+              label: Text(l10n.logout),
             ),
           ],
         ),

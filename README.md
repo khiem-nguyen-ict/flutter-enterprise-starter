@@ -166,6 +166,9 @@ lib/
 │   │   ├── data/          # datasources, models, repositories (impl)
 │   │   ├── domain/        # entities, repository interfaces, use cases
 │   │   └── presentation/  # state (bloc), pages, widgets
+│   ├── profile/           # Profile feature (mock user, demo)
+│   │   ├── domain/        # entity (User)
+│   │   └── presentation/  # provider (mock data) + pages
 │   └── settings/          # Settings feature
 ├── shared/                # Reusable code across features
 │   ├── widgets/           # Reusable widgets
@@ -297,21 +300,57 @@ themeMode: ref.watch(themeModeProvider),
 Navigation is handled by `go_router` with Riverpod-powered route guards.
 
 - **Route config**: `lib/core/routing/app_router.dart`
-- **Flow**: `/splash` → `/login` → `/home` → `/settings`
+- **Flow**: `/splash` → `/login` → `/home` → `/profile` → `/settings`
 - **State guard**: `AuthStatus` enum in `lib/features/auth/data/providers/auth_provider.dart`
   - `unknown` → `/splash`
   - `unauthenticated` → `/login`
-  - `authenticated` → `/home` or `/settings`
+  - `authenticated` → `/home`, `/profile`, or `/settings`
 
 Central route paths in `app_router.dart`:
 - `splashRoutePath`
 - `loginRoutePath`
 - `homeRoutePath`
+- `profileRoutePath`
 - `settingsRoutePath`
 
 
+## Demo (Mock Data)
+
+The app ships with a fully clickable demo flow backed by **mock data** so you
+can explore the UI without a backend. `AuthNotifier.checkAuth()` starts
+`unauthenticated`, so the app opens at **Login**.
+
+```
+Login  ──▶  Home  ──▶  Profile  ──▶  Settings
+  │                     │                  │
+  └─────────────────────┴──────────────────┘  (Log out → Login)
+```
+
+- **Login** (`lib/features/auth/presentation/pages/login_page.dart`) — mock
+  email/password form, pre-filled with `ada.lovelace@example.com` / `demo1234`.
+  `login()` sets `authenticated` and navigates to Home.
+- **Home** (`lib/features/home/presentation/pages/home_page.dart`) — dashboard
+  with mock KPI cards, a profile summary card, and a recent-activity feed.
+  "View Profile" opens the Profile page.
+- **Profile** (`lib/features/profile/presentation/pages/profile_page.dart`) —
+  renders the mock `User` (name, email, role, bio, location, join date, follower
+  stats, interest chips). Links to **Settings** / **Edit Profile** / **Log out**.
+- **Settings** (`lib/features/settings/presentation/pages/settings_page.dart`) —
+  theme + locale switches and a **Log out** button (returns to Login).
+
+### Swapping mock data for a real backend
+
+- **Auth** — replace the token check in `checkAuth()` with a real persisted-token
+  read, and have `login()` call `api.post('/auth/login', …)` instead of faking
+  success.
+- **Profile** — replace `mockUserProvider`
+  (`lib/features/profile/presentation/provider/mock_user_provider.dart`) with a
+  provider backed by a real repository / data source.
+- **Home** — feed the dashboard cards and activity feed from real API responses.
+
 ## Roadmap
 
+- [x] Add demo flow with mock data (Login → Home → Profile → Settings)
 - [x] Wire `core/routing` with guarded routes
 - [x] Implement `core/api` Dio client with auth, logging, retry & refresh-token interceptors
 - [x] Implement `core/storage` secure/local persistence

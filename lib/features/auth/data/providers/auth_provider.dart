@@ -20,7 +20,8 @@ class AuthNotifier extends StateNotifier<AuthState> {
   AuthNotifier() : super(const AuthState());
 
   void checkAuth() {
-    state = const AuthState(status: AuthStatus.authenticated, userId: 'user_123');
+    // Demo: no persisted session, so the user starts at the login screen.
+    state = const AuthState(status: AuthStatus.unauthenticated);
   }
 
   void login() {

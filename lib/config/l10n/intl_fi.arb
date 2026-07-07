@@ -1,9 +1,107 @@
 {
   "@@locale": "fi",
   "appTitle": "Flutter Enterprise Starter",
+  "@appTitle": {
+    "description": "Application title"
+  },
   "settings": "Asetukset",
+  "@settings": {
+    "description": "Settings page title"
+  },
   "backToHome": "Takaisin etusivulle",
+  "@backToHome": {
+    "description": "Back to Home button text"
+  },
   "home": "Koti",
+  "@home": {
+    "description": "Home page title"
+  },
   "goToSettings": "Siirry asetuksiin",
-  "login": "Kirjaudu sisään"
+  "@goToSettings": {
+    "description": "Go to Settings button text"
+  },
+  "login": "Kirjaudu sisään",
+  "@login": {
+    "description": "Login button text"
+  },
+  "email": "Sähköposti",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Salasana",
+  "@password": {
+    "description": "Password field label"
+  },
+  "demoHint": "Demotila - mikä tahansa sähköposti ja salasana kirjaa sinut sisään",
+  "@demoHint": {
+    "description": "Hint shown on the login screen"
+  },
+  "welcomeBack": "Tervetuloa takaisin",
+  "@welcomeBack": {
+    "description": "Home screen greeting"
+  },
+  "viewProfile": "Näytä profiili",
+  "@viewProfile": {
+    "description": "Button that navigates to the profile screen"
+  },
+  "profile": "Profiili",
+  "@profile": {
+    "description": "Profile screen title"
+  },
+  "role": "Rooli",
+  "@role": {
+    "description": "User role label"
+  },
+  "bio": "Esittely",
+  "@bio": {
+    "description": "User bio label"
+  },
+  "location": "Sijainti",
+  "@location": {
+    "description": "User location label"
+  },
+  "joined": "Liittynyt",
+  "@joined": {
+    "description": "Account join date label"
+  },
+  "posts": "Julkaisut",
+  "@posts": {
+    "description": "Number of posts label"
+  },
+  "followers": "Seuraajat",
+  "@followers": {
+    "description": "Number of followers label"
+  },
+  "following": "Seurattavat",
+  "@following": {
+    "description": "Number of accounts followed label"
+  },
+  "logout": "Kirjaudu ulos",
+  "@logout": {
+    "description": "Log out button text"
+  },
+  "editProfile": "Muokkaa profiilia",
+  "@editProfile": {
+    "description": "Edit profile button text"
+  },
+  "recentActivity": "Viimeisin aktiivisuus",
+  "@recentActivity": {
+    "description": "Recent activity section title"
+  },
+  "revenue": "Liikevaihto",
+  "@revenue": {
+    "description": "Revenue stat label"
+  },
+  "activeUsers": "Aktiiviset käyttäjät",
+  "@activeUsers": {
+    "description": "Active users stat label"
+  },
+  "orders": "Tilaukset",
+  "@orders": {
+    "description": "Orders stat label"
+  },
+  "conversion": "Konversio",
+  "@conversion": {
+    "description": "Conversion rate stat label"
+  }
 }

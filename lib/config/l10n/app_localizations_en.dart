@@ -25,4 +25,64 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get login => 'Login';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get demoHint => 'Demo mode - any email and password will sign you in';
+
+  @override
+  String get welcomeBack => 'Welcome back';
+
+  @override
+  String get viewProfile => 'View Profile';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get role => 'Role';
+
+  @override
+  String get bio => 'Bio';
+
+  @override
+  String get location => 'Location';
+
+  @override
+  String get joined => 'Joined';
+
+  @override
+  String get posts => 'Posts';
+
+  @override
+  String get followers => 'Followers';
+
+  @override
+  String get following => 'Following';
+
+  @override
+  String get logout => 'Log out';
+
+  @override
+  String get editProfile => 'Edit Profile';
+
+  @override
+  String get recentActivity => 'Recent Activity';
+
+  @override
+  String get revenue => 'Revenue';
+
+  @override
+  String get activeUsers => 'Active Users';
+
+  @override
+  String get orders => 'Orders';
+
+  @override
+  String get conversion => 'Conversion';
 }
