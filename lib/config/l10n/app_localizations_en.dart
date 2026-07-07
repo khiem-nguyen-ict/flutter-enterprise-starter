@@ -10,4 +10,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appTitle => 'Flutter Enterprise Starter';
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get backToHome => 'Back to Home';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get goToSettings => 'Go to Settings';
+
+  @override
+  String get login => 'Login';
 }

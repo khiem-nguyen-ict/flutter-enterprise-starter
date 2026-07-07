@@ -1,0 +1,9 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Flutter Enterprise Starter",
+  "settings": "Cài đặt",
+  "backToHome": "Quay về trang chủ",
+  "home": "Trang chủ",
+  "goToSettings": "Đi đến cài đặt",
+  "login": "Đăng nhập"
+}
