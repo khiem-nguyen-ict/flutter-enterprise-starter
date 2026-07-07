@@ -74,3 +74,7 @@ coverage/
 !**/ios/**/default.modev
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
+
+# Test / tooling artifacts
+.playwright-mcp/
+step-login.png

@@ -5,11 +5,13 @@ import '../../features/auth/data/providers/auth_provider.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/auth/presentation/pages/splash_page.dart';
 import '../../features/home/presentation/pages/home_page.dart';
+import '../../features/profile/presentation/pages/profile_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
 
 const splashRoutePath = '/splash';
 const loginRoutePath = '/login';
 const homeRoutePath = '/home';
+const profileRoutePath = '/profile';
 const settingsRoutePath = '/settings';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
@@ -34,6 +36,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const HomePage(),
       ),
       GoRoute(
+        path: profileRoutePath,
+        builder: (context, state) => const ProfilePage(),
+      ),
+      GoRoute(
         path: settingsRoutePath,
         builder: (context, state) => const SettingsPage(),
       ),
@@ -49,13 +55,18 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         if (location == splashRoutePath || location == loginRoutePath) {
           return homeRoutePath;
         }
-        if (location == settingsRoutePath || location == homeRoutePath) {
+        if (location == homeRoutePath ||
+            location == profileRoutePath ||
+            location == settingsRoutePath) {
           return null;
         }
         return homeRoutePath;
       }
 
-      if (location == homeRoutePath || location == settingsRoutePath || location == splashRoutePath) {
+      if (location == homeRoutePath ||
+          location == profileRoutePath ||
+          location == settingsRoutePath ||
+          location == splashRoutePath) {
         return loginRoutePath;
       }
 
