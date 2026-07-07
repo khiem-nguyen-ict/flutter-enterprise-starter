@@ -90,6 +90,42 @@ flutter test
 - All user-facing strings go in `config/l10n` (no hardcoded text).
 - Empty directories are kept in git via `.gitkeep`.
 
+## Design System / Theme
+
+The theme lives in `lib/core/theme/` and is organized as a token hierarchy:
+
+```
+Theme
+├── Color       → app_colors.dart      (Material 3 ColorScheme via seed)
+├── Typography   → app_typography.dart  (Material 3 type scale, themed)
+├── Spacing      → app_spacing.dart     (4pt grid: none→huge + insets)
+├── Radius       → app_radius.dart      (none→full corner tokens)
+└── Elevation    → app_elevation.dart   (none→highest + shadow helper)
+```
+
+Each non-color token is a `ThemeExtension`, so it is attached to `ThemeData`
+and accessed uniformly through `BuildContext` (see `theme_extensions.dart`):
+
+```dart
+import 'core/theme/theme.dart';
+
+Container(
+  padding: context.spacing.cardPadding,
+  decoration: BoxDecoration(
+    borderRadius: context.radius.mdRadius,
+    boxShadow: context.elevation.shadow(context.elevation.medium),
+  ),
+  child: Text('Hello', style: context.typography.titleLarge),
+);
+```
+
+- **Color** — `AppColors.lightColorScheme` / `darkColorScheme` are generated
+  from a single brand `seed` via `ColorScheme.fromSeed` (Material 3).
+- **Typography** — full Material 3 scale; colors track `onSurface` so it
+  adapts to light/dark automatically. Also exposed as `ThemeData.textTheme`.
+- **Theme assembly** — `AppTheme.light()` / `AppTheme.dark()` in `app_theme.dart`
+  (wired into `main.dart` with `ThemeMode.system`).
+
 ## Roadmap
 
 - [ ] Implement `core/api` Dio client with auth & logging interceptors

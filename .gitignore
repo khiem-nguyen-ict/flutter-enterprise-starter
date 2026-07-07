@@ -15,6 +15,7 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
+.kilo/
 
 # Flutter / Dart / Pub related
 **/doc/api/
