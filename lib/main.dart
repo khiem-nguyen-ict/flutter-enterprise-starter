@@ -9,6 +9,33 @@ import 'core/routing/app_router.dart';
 import 'core/storage/storage_providers.dart';
 import 'core/theme/app_theme.dart';
 
+/// Replaces the Material 3 "stretch" overscroll indicator on Android.
+///
+/// Flutter's default [MaterialScrollBehavior] paints a
+/// [StretchingOverscrollIndicator] on Android when [ThemeData.useMaterial3] is
+/// true, which visibly stretches the whole viewport when the user scrolls past
+/// the content bounds. This uses the classic, non-stretching edge-glow
+/// indicator instead, while leaving every other platform untouched.
+class AppScrollBehavior extends MaterialScrollBehavior {
+  const AppScrollBehavior();
+
+  @override
+  Widget buildOverscrollIndicator(
+    BuildContext context,
+    Widget child,
+    ScrollableDetails details,
+  ) {
+    if (getPlatform(context) == TargetPlatform.android) {
+      return GlowingOverscrollIndicator(
+        axisDirection: details.direction,
+        color: Theme.of(context).colorScheme.secondary,
+        child: child,
+      );
+    }
+    return super.buildOverscrollIndicator(context, child, details);
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final sharedPreferences = await SharedPreferences.getInstance();
@@ -39,6 +66,7 @@ class App extends ConsumerWidget {
       locale: locale,
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
+      scrollBehavior: const AppScrollBehavior(),
     );
   }
 }
